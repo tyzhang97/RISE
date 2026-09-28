@@ -1,0 +1,31 @@
+{
+  "atlas_repo": "../rise/atlas_repo", // Contains soft labels and Fine-grained geodesic distances.
+  // HCP-YA integrated parcel data and neural-network outputs.
+  "train_data": "../data/HCP/integrated_data/mean/train_samples_parcel-level.feather",
+  "test_data": "../data/HCP/integrated_data/mean/test_samples_parcel-level.feather",
+  "test_group_data": "../data/HCP/integrated_data/mean/test_group-mean_parcel-level.feather",
+
+  // Runtime and model architecture.
+  "device": "cuda:0",
+  "num_workers": 0,
+  "run_name": "mean",
+  "models_root": "../models",
+  "model_name": "rise_hcp_pretrain_models",
+  "input_dim": 378,
+  "hidden_dims": [512, 512],
+  "embedding_dim": 256,
+
+  // Optimization and checkpoint selection.
+  "repeats": 10,
+  "epochs": 150,
+  "batch_size": 512,
+  "learning_rate": 1e-5,
+  "weight_decay": 1e-6,
+  "validation_ratio": 0.05,
+  "scheduler_step_size": 20,
+  "scheduler_gamma": 0.8,
+  "early_stopping_patience": 20,
+  "geodesic_loss_weight": 1.0,
+  "embedding_l2_weight": 0.01,
+  "use_best_checkpoint": true
+}

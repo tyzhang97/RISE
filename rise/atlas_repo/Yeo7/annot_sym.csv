@@ -1,0 +1,8 @@
+Region label,Train label,Region name
+1,0, Visual
+2,1, Somatomotor
+3,2, Dorsal Attention
+4,3, Salience / Ventral Attention
+5,4, Limbic
+6,5, Control
+7,6, Default

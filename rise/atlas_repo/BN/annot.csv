@@ -1,0 +1,211 @@
+Region label,Train label,Region name,Hemi,Centroid X,Centroid Y,Centroid Z,Centroid R,Centroid A,Centroid S,Other info,Surface label,Lobe
+1,0,L_A8m,Left,95,141,126,-5,15,54,"LH_SFG, Superior Frontal Gyrus  ",,LH_ Frontal
+3,1,L_A8dl,Left,108,150,125,-18,24,53,"LH_SFG, Superior Frontal Gyrus  ",,LH_ Frontal
+5,2,L_A9l,Left,101,175,112,-11,49,40,"LH_SFG, Superior Frontal Gyrus  ",,LH_ Frontal
+7,3,L_A6dl,Left,108,125,137,-18,-1,65,"LH_SFG, Superior Frontal Gyrus  ",,LH_ Frontal
+9,4,L_A6m,Left,96,121,130,-6,-5,58,"LH_SFG, Superior Frontal Gyrus  ",,LH_ Frontal
+11,5,L_A9m,Left,95,162,110,-5,36,38,"LH_SFG, Superior Frontal Gyrus  ",,LH_ Frontal
+13,6,L_A10m,Left,98,182,87,-8,56,15,"LH_SFG, Superior Frontal Gyrus  ",,LH_ Frontal
+15,7,L_A9/46d,Left,117,169,103,-27,43,31,"LH_MFG, Middle Frontal Gyrus ",,LH_ Frontal
+17,8,L_IFJ,Left,132,139,108,-42,13,36,"LH_MFG, Middle Frontal Gyrus ",,LH_ Frontal
+19,9,L_A46,Left,118,182,84,-28,56,12,"LH_MFG, Middle Frontal Gyrus ",,LH_ Frontal
+21,10,L_A9/46v,Left,131,167,88,-41,41,16,"LH_MFG, Middle Frontal Gyrus ",,LH_ Frontal
+23,11,L_A8vl,Left,123,149,117,-33,23,45,"LH_MFG, Middle Frontal Gyrus ",,LH_ Frontal
+25,12,L_A6vl,Left,122,130,127,-32,4,55,"LH_MFG, Middle Frontal Gyrus ",,LH_ Frontal
+27,13,L_A10l,Left,116,186,66,-26,60,-6,"LH_MFG, Middle Frontal Gyrus ",,LH_ Frontal
+29,14,L_A44d,Left,136,139,96,-46,13,24,"LH_IFG, Inferior Frontal Gyrus",,LH_ Frontal
+31,15,L_IFS,Left,137,158,86,-47,32,14,"LH_IFG, Inferior Frontal Gyrus",,LH_ Frontal
+33,16,L_A45c,Left,143,149,83,-53,23,11,"LH_IFG, Inferior Frontal Gyrus",,LH_ Frontal
+35,17,L_A45r,Left,139,162,69,-49,36,-3,"LH_IFG, Inferior Frontal Gyrus",,LH_ Frontal
+37,18,L_A44op,Left,129,149,76,-39,23,4,"LH_IFG, Inferior Frontal Gyrus",,LH_ Frontal
+39,19,L_A44v,Left,142,139,78,-52,13,6,"LH_IFG, Inferior Frontal Gyrus",,LH_ Frontal
+41,20,L_A14m,Left,97,180,65,-7,54,-7,"LH_OrG, Orbital Gyrus",,LH_ Frontal
+43,21,L_A12/47o,Left,126,159,56,-36,33,-16,"LH_OrG, Orbital Gyrus",,LH_ Frontal
+45,22,L_A11l,Left,113,164,54,-23,38,-18,"LH_OrG, Orbital Gyrus",,LH_ Frontal
+47,23,L_A11m,Left,96,178,53,-6,52,-19,"LH_OrG, Orbital Gyrus",,LH_ Frontal
+49,24,L_A13,Left,100,144,53,-10,18,-19,"LH_OrG, Orbital Gyrus",,LH_ Frontal
+51,25,L_A12/47l,Left,131,158,63,-41,32,-9,"LH_OrG, Orbital Gyrus",,LH_ Frontal
+53,26,L_A4hf,Left,139,118,111,-49,-8,39,"LH_PrG, Precentral Gyrus",,LH_ Frontal
+55,27,L_A6cdl,Left,122,117,130,-32,-9,58,"LH_PrG, Precentral Gyrus",,LH_ Frontal
+57,28,L_A4ul,Left,116,101,135,-26,-25,63,"LH_PrG, Precentral Gyrus",,LH_ Frontal
+59,29,L_A4t,Left,103,106,145,-13,-20,73,"LH_PrG, Precentral Gyrus",,LH_ Frontal
+61,30,L_A4tl,Left,142,126,80,-52,0,8,"LH_PrG, Precentral Gyrus",,LH_ Frontal
+63,31,L_A6cvl,Left,139,131,102,-49,5,30,"LH_PrG, Precentral Gyrus",,LH_ Frontal
+65,32,L_A1/2/3ll,Left,98,88,130,-8,-38,58,"LH_PCL, Paracentral Lobule",,LH_ Frontal
+67,33,L_A4ll,Left,94,103,133,-4,-23,61,"LH_PCL, Paracentral Lobule",,LH_ Frontal
+69,34,L_A38m,Left,122,140,38,-32,14,-34,"LH_STG, Superior Temporal Gyrus",,LH_Temporal
+71,35,L_A41/42,Left,144,94,84,-54,-32,12,"LH_STG, Superior Temporal Gyrus",,LH_Temporal
+73,36,L_TE1.0 and TE1.2,Left,140,115,73,-50,-11,1,"LH_STG, Superior Temporal Gyrus",,LH_Temporal
+75,37,L_A22c,Left,152,93,79,-62,-33,7,"LH_STG, Superior Temporal Gyrus",,LH_Temporal
+77,38,L_A38l,Left,135,137,52,-45,11,-20,"LH_STG, Superior Temporal Gyrus",,LH_Temporal
+79,39,L_A22r,Left,145,123,62,-55,-3,-10,"LH_STG, Superior Temporal Gyrus",,LH_Temporal
+81,40,L_A21c,Left,155,96,60,-65,-30,-12,"LH_MTG, Middle Temporal Gyrus",,LH_Temporal
+83,41,L_A21r,Left,143,128,42,-53,2,-30,"LH_MTG, Middle Temporal Gyrus",,LH_Temporal
+85,42,L_A37dl,Left,149,68,76,-59,-58,4,"LH_MTG, Middle Temporal Gyrus",,LH_Temporal
+87,43,L_aSTS,Left,148,106,63,-58,-20,-9,"LH_MTG, Middle Temporal Gyrus",,LH_Temporal
+89,44,L_A20iv,Left,135,100,45,-45,-26,-27,"LH_ITG, Inferior Temporal Gyrus",,LH_Temporal
+91,45,L_A37elv,Left,141,69,57,-51,-57,-15,"LH_ITG, Inferior Temporal Gyrus",,LH_Temporal
+93,46,L_A20r,Left,133,124,31,-43,-2,-41,"LH_ITG, Inferior Temporal Gyrus",,LH_Temporal
+95,47,L_A20il,Left,146,110,44,-56,-16,-28,"LH_ITG, Inferior Temporal Gyrus",,LH_Temporal
+97,48,L_A37vl,Left,145,66,66,-55,-60,-6,"LH_ITG, Inferior Temporal Gyrus",,LH_Temporal
+99,49,L_A20cl,Left,149,84,56,-59,-42,-16,"LH_ITG, Inferior Temporal Gyrus",,LH_Temporal
+101,50,L_A20cv,Left,145,95,45,-55,-31,-27,"LH_ITG, Inferior Temporal Gyrus",,LH_Temporal
+103,51,L_A20rv,Left,123,110,40,-33,-16,-32,"LH_FuG, Fusiform Gyrus",,LH_Temporal
+105,52,L_A37mv,Left,121,62,58,-31,-64,-14,"LH_FuG, Fusiform Gyrus",,LH_Temporal
+107,53,L_A37lv,Left,132,75,55,-42,-51,-17,"LH_FuG, Fusiform Gyrus",,LH_Temporal
+109,54,L_A35/36r,Left,117,119,38,-27,-7,-34,"LH_PhG, Parahippocampal Gyrus",,LH_Temporal
+111,55,L_A35/36c,Left,115,101,46,-25,-25,-26,"LH_PhG, Parahippocampal Gyrus",,LH_Temporal
+113,56,L_TL,Left,118,94,54,-28,-32,-18,"LH_PhG, Parahippocampal Gyrus",,LH_Temporal
+115,57,L_A28/34,Left,109,114,42,-19,-12,-30,"LH_PhG, Parahippocampal Gyrus",,LH_Temporal
+117,58,L_TI,Left,113,128,40,-23,2,-32,"LH_PhG, Parahippocampal Gyrus",,LH_Temporal
+119,59,L_TH,Left,107,87,62,-17,-39,-10,"LH_PhG, Parahippocampal Gyrus",,LH_Temporal
+121,60,L_rpSTS,Left,144,86,76,-54,-40,4,"LH_pSTS, posterior Superior Temporal Sulcus ",,LH_Temporal
+123,61,L_cpSTS,Left,142,76,83,-52,-50,11,"LH_pSTS, posterior Superior Temporal Sulcus ",,LH_Temporal
+125,62,L_A7r,Left,106,66,135,-16,-60,63,"LH_SPL, Superior Parietal Lobule",,LH_Parietal
+127,63,L_A7c,Left,105,55,124,-15,-71,52,"LH_SPL, Superior Parietal Lobule",,LH_Parietal
+129,64,L_A5l,Left,123,79,122,-33,-47,50,"LH_SPL, Superior Parietal Lobule",,LH_Parietal
+131,65,L_A7pc,Left,112,79,137,-22,-47,65,"LH_SPL, Superior Parietal Lobule",,LH_Parietal
+133,66,L_A7ip,Left,117,67,126,-27,-59,54,"LH_SPL, Superior Parietal Lobule",,LH_Parietal
+135,67,L_A39c,Left,124,46,101,-34,-80,29,"LH_IPL, Inferior Parietal Lobule",,LH_Parietal
+137,68,L_A39rd,Left,128,65,118,-38,-61,46,"LH_IPL, Inferior Parietal Lobule",,LH_Parietal
+139,69,L_A40rd,Left,141,93,114,-51,-33,42,"LH_IPL, Inferior Parietal Lobule",,LH_Parietal
+141,70,L_A40c,Left,146,77,110,-56,-49,38,"LH_IPL, Inferior Parietal Lobule",,LH_Parietal
+143,71,L_A39rv,Left,137,61,98,-47,-65,26,"LH_IPL, Inferior Parietal Lobule",,LH_Parietal
+145,72,L_A40rv,Left,143,95,95,-53,-31,23,"LH_IPL, Inferior Parietal Lobule",,LH_Parietal
+147,73,L_A7m,Left,95,63,123,-5,-63,51,"LH_Pcun, Precuneus",,LH_Parietal
+149,74,L_A5m,Left,98,79,129,-8,-47,57,"LH_Pcun, Precuneus",,LH_Parietal
+151,75,L_dmPOS,Left,102,59,97,-12,-67,25,"LH_Pcun, Precuneus",,LH_Parietal
+153,76,L_A31,Left,96,71,106,-6,-55,34,"LH_Pcun, Precuneus",,LH_Parietal
+155,77,L_A1/2/3ulhf,Left,140,110,115,-50,-16,43,"LH_PoG, Postcentral Gyrus",,LH_Parietal
+157,78,L_A1/2/3tonIa,Left,146,112,88,-56,-14,16,"LH_PoG, Postcentral Gyrus",,LH_Parietal
+159,79,L_A2,Left,136,96,122,-46,-30,50,"LH_PoG, Postcentral Gyrus",,LH_Parietal
+161,80,L_A1/2/3tru,Left,111,91,140,-21,-35,68,"LH_PoG, Postcentral Gyrus",,LH_Parietal
+163,81,L_G,Left,126,106,82,-36,-20,10,"LH_INS, Insular Gyrus",,LH_Insular
+165,82,L_vIa,Left,122,140,59,-32,14,-13,"LH_INS, Insular Gyrus",,LH_Insular
+167,83,L_dIa,Left,124,144,73,-34,18,1,"LH_INS, Insular Gyrus",,LH_Insular
+169,84,L_vId/vIg,Left,128,122,63,-38,-4,-9,"LH_INS, Insular Gyrus",,LH_Insular
+171,85,L_dIg,Left,128,118,80,-38,-8,8,"LH_INS, Insular Gyrus",,LH_Insular
+173,86,L_dId,Left,128,131,77,-38,5,5,"LH_INS, Insular Gyrus",,LH_Insular
+175,87,L_A23d,Left,94,87,103,-4,-39,31,"LH_CG, Cingulate Gyrus",,LH_Limbic
+177,88,L_A24rv,Left,93,134,97,-3,8,25,"LH_CG, Cingulate Gyrus",,LH_Limbic
+179,89,L_A32p,Left,96,160,93,-6,34,21,"LH_CG, Cingulate Gyrus",,LH_Limbic
+181,90,L_A23v,Left,98,79,82,-8,-47,10,"LH_CG, Cingulate Gyrus",,LH_Limbic
+183,91,L_A24cd,Left,95,133,109,-5,7,37,"LH_CG, Cingulate Gyrus",,LH_Limbic
+185,92,L_A23c,Left,97,103,113,-7,-23,41,"LH_CG, Cingulate Gyrus",,LH_Limbic
+187,93,L_A32sg,Left,94,165,70,-4,39,-2,"LH_CG, Cingulate Gyrus",,LH_Limbic
+189,94,L_cLinG,Left,101,44,61,-11,-82,-11,"LH_MVOcC, MedioVentral Occipital Cortex",,LH_Occipital
+191,95,L_rCunG,Left,95,45,82,-5,-81,10,"LH_MVOcC, MedioVentral Occipital Cortex",,LH_Occipital
+193,96,L_cCunG,Left,96,32,73,-6,-94,1,"LH_MVOcC, MedioVentral Occipital Cortex",,LH_Occipital
+195,97,L_rLinG,Left,107,66,66,-17,-60,-6,"LH_MVOcC, MedioVentral Occipital Cortex",,LH_Occipital
+197,98,L_vmPOS,Left,103,58,84,-13,-68,12,"LH_MVOcC, MedioVentral Occipital Cortex",,LH_Occipital
+199,99,L_mOccG,Left,121,37,83,-31,-89,11,"LH_LOcC, lateral Occipital Cortex",,LH_Occipital
+201,100,L_V5/MT+,Left,136,52,75,-46,-74,3,"LH_LOcC, lateral Occipital Cortex",,LH_Occipital
+203,101,L_OPC,Left,108,27,74,-18,-99,2,"LH_LOcC, lateral Occipital Cortex",,LH_Occipital
+205,102,L_iOccG,Left,120,38,60,-30,-88,-12,"LH_LOcC, lateral Occipital Cortex",,LH_Occipital
+207,103,L_msOccG,Left,101,38,103,-11,-88,31,"LH_LOcC, lateral Occipital Cortex",,LH_Occipital
+209,104,L_lsOccG,Left,112,49,108,-22,-77,36,"LH_LOcC, lateral Occipital Cortex",,LH_Occipital
+2,105,R_A8m,Right,83,142,126,7,16,54,"RH_SFG, Superior Frontal Gyrus  ",,RH_ Frontal
+4,106,R_A8dl,Right,68,152,123,22,26,51,"RH_SFG, Superior Frontal Gyrus  ",,RH_ Frontal
+6,107,R_A9l,Right,77,174,112,13,48,40,"RH_SFG, Superior Frontal Gyrus  ",,RH_ Frontal
+8,108,R_A6dl,Right,70,130,136,20,4,64,"RH_SFG, Superior Frontal Gyrus  ",,RH_ Frontal
+10,109,R_A6m,Right,83,122,132,7,-4,60,"RH_SFG, Superior Frontal Gyrus  ",,RH_ Frontal
+12,110,R_A9m,Right,84,164,107,6,38,35,"RH_SFG, Superior Frontal Gyrus  ",,RH_ Frontal
+14,111,R_A10m,Right,82,184,85,8,58,13,"RH_SFG, Superior Frontal Gyrus  ",,RH_ Frontal
+16,112,R_A9/46d,Right,60,163,108,30,37,36,"RH_MFG, Middle Frontal Gyrus ",,RH_ Frontal
+18,113,R_IFJ,Right,48,137,111,42,11,39,"RH_MFG, Middle Frontal Gyrus ",,RH_ Frontal
+20,114,R_A46,Right,62,181,89,28,55,17,"RH_MFG, Middle Frontal Gyrus ",,RH_ Frontal
+22,115,R_A9/46v,Right,48,170,86,42,44,14,"RH_MFG, Middle Frontal Gyrus ",,RH_ Frontal
+24,116,R_A8vl,Right,48,153,111,42,27,39,"RH_MFG, Middle Frontal Gyrus ",,RH_ Frontal
+26,117,R_A6vl,Right,56,134,126,34,8,54,"RH_MFG, Middle Frontal Gyrus ",,RH_ Frontal
+28,118,R_A10l,Right,65,187,68,25,61,-4,"RH_MFG, Middle Frontal Gyrus ",,RH_ Frontal
+30,119,R_A44d,Right,45,142,97,45,16,25,"RH_IFG, Inferior Frontal Gyrus",,RH_ Frontal
+32,120,R_IFS,Right,42,161,85,48,35,13,"RH_IFG, Inferior Frontal Gyrus",,RH_ Frontal
+34,121,R_A45c,Right,36,150,84,54,24,12,"RH_IFG, Inferior Frontal Gyrus",,RH_ Frontal
+36,122,R_A45r,Right,39,162,71,51,36,-1,"RH_IFG, Inferior Frontal Gyrus",,RH_ Frontal
+38,123,R_A44op,Right,48,148,75,42,22,3,"RH_IFG, Inferior Frontal Gyrus",,RH_ Frontal
+40,124,R_A44v,Right,36,140,83,54,14,11,"RH_IFG, Inferior Frontal Gyrus",,RH_ Frontal
+42,125,R_A14m,Right,84,173,65,6,47,-7,"RH_OrG, Orbital Gyrus",,RH_ Frontal
+44,126,R_A12/47o,Right,50,165,58,40,39,-14,"RH_OrG, Orbital Gyrus",,RH_ Frontal
+46,127,R_A11l,Right,67,162,54,23,36,-18,"RH_OrG, Orbital Gyrus",,RH_ Frontal
+48,128,R_A11m,Right,84,183,56,6,57,-16,"RH_OrG, Orbital Gyrus",,RH_ Frontal
+50,129,R_A13,Right,81,146,53,9,20,-19,"RH_OrG, Orbital Gyrus",,RH_ Frontal
+52,130,R_A12/47l,Right,48,157,63,42,31,-9,"RH_OrG, Orbital Gyrus",,RH_ Frontal
+54,131,R_A4hf,Right,35,124,105,55,-2,33,"RH_PrG, Precentral Gyrus",,RH_ Frontal
+56,132,R_A6cdl,Right,57,119,129,33,-7,57,"RH_PrG, Precentral Gyrus",,RH_ Frontal
+58,133,R_A4ul,Right,56,107,131,34,-19,59,"RH_PrG, Precentral Gyrus",,RH_ Frontal
+60,134,R_A4t,Right,75,104,143,15,-22,71,"RH_PrG, Precentral Gyrus",,RH_ Frontal
+62,135,R_A4tl,Right,36,130,81,54,4,9,"RH_PrG, Precentral Gyrus",,RH_ Frontal
+64,136,R_A6cvl,Right,39,133,102,51,7,30,"RH_PrG, Precentral Gyrus",,RH_ Frontal
+66,137,R_A1/2/3ll,Right,80,92,126,10,-34,54,"RH_PCL, Paracentral Lobule",,RH_ Frontal
+68,138,R_A4ll,Right,85,105,133,5,-21,61,"RH_PCL, Paracentral Lobule",,RH_ Frontal
+70,139,R_A38m,Right,59,141,38,31,15,-34,"RH_STG, Superior Temporal Gyrus",,RH_Temporal
+72,140,R_A41/42,Right,36,102,83,54,-24,11,"RH_STG, Superior Temporal Gyrus",,RH_Temporal
+74,141,R_TE1.0 and TE1.2,Right,39,122,71,51,-4,-1,"RH_STG, Superior Temporal Gyrus",,RH_Temporal
+76,142,R_A22c,Right,24,106,78,66,-20,6,"RH_STG, Superior Temporal Gyrus",,RH_Temporal
+78,143,R_A38l,Right,43,138,52,47,12,-20,"RH_STG, Superior Temporal Gyrus",,RH_Temporal
+80,144,R_A22r,Right,34,114,67,56,-12,-5,"RH_STG, Superior Temporal Gyrus",,RH_Temporal
+82,145,R_A21c,Right,25,97,59,65,-29,-13,"RH_MTG, Middle Temporal Gyrus",,RH_Temporal
+84,146,R_A21r,Right,39,132,40,51,6,-32,"RH_MTG, Middle Temporal Gyrus",,RH_Temporal
+86,147,R_A37dl,Right,30,73,75,60,-53,3,"RH_MTG, Middle Temporal Gyrus",,RH_Temporal
+88,148,R_aSTS,Right,32,110,62,58,-16,-10,"RH_MTG, Middle Temporal Gyrus",,RH_Temporal
+90,149,R_A20iv,Right,44,112,39,46,-14,-33,"RH_ITG, Inferior Temporal Gyrus",,RH_Temporal
+92,150,R_A37elv,Right,37,74,54,53,-52,-18,"RH_ITG, Inferior Temporal Gyrus",,RH_Temporal
+94,151,R_A20r,Right,50,126,29,40,0,-43,"RH_ITG, Inferior Temporal Gyrus",,RH_Temporal
+96,152,R_A20il,Right,35,115,40,55,-11,-32,"RH_ITG, Inferior Temporal Gyrus",,RH_Temporal
+98,153,R_A37vl,Right,36,69,64,54,-57,-8,"RH_ITG, Inferior Temporal Gyrus",,RH_Temporal
+100,154,R_A20cl,Right,29,86,55,61,-40,-17,"RH_ITG, Inferior Temporal Gyrus",,RH_Temporal
+102,155,R_A20cv,Right,36,95,46,54,-31,-26,"RH_ITG, Inferior Temporal Gyrus",,RH_Temporal
+104,156,R_A20rv,Right,57,111,38,33,-15,-34,"RH_FuG, Fusiform Gyrus",,RH_Temporal
+106,157,R_A37mv,Right,59,64,58,31,-62,-14,"RH_FuG, Fusiform Gyrus",,RH_Temporal
+108,158,R_A37lv,Right,47,77,53,43,-49,-19,"RH_FuG, Fusiform Gyrus",,RH_Temporal
+110,159,R_A35/36r,Right,62,118,39,28,-8,-33,"RH_PhG, Parahippocampal Gyrus",,RH_Temporal
+112,160,R_A35/36c,Right,64,103,45,26,-23,-27,"RH_PhG, Parahippocampal Gyrus",,RH_Temporal
+114,161,R_TL,Right,60,96,54,30,-30,-18,"RH_PhG, Parahippocampal Gyrus",,RH_Temporal
+116,162,R_A28/34,Right,71,116,42,19,-10,-30,"RH_PhG, Parahippocampal Gyrus",,RH_Temporal
+118,163,R_TI,Right,68,127,36,22,1,-36,"RH_PhG, Parahippocampal Gyrus",,RH_Temporal
+120,164,R_TH,Right,71,90,61,19,-36,-11,"RH_PhG, Parahippocampal Gyrus",,RH_Temporal
+122,165,R_rpSTS,Right,37,89,75,53,-37,3,"RH_pSTS, posterior Superior Temporal Sulcus ",,RH_Temporal
+124,166,R_cpSTS,Right,33,86,84,57,-40,12,"RH_pSTS, posterior Superior Temporal Sulcus ",,RH_Temporal
+126,167,R_A7r,Right,71,69,137,19,-57,65,"RH_SPL, Superior Parietal Lobule",,RH_Parietal
+128,168,R_A7c,Right,71,57,126,19,-69,54,"RH_SPL, Superior Parietal Lobule",,RH_Parietal
+130,169,R_A5l,Right,55,84,126,35,-42,54,"RH_SPL, Superior Parietal Lobule",,RH_Parietal
+132,170,R_A7pc,Right,67,83,139,23,-43,67,"RH_SPL, Superior Parietal Lobule",,RH_Parietal
+134,171,R_A7ip,Right,59,72,125,31,-54,53,"RH_SPL, Superior Parietal Lobule",,RH_Parietal
+136,172,R_A39c,Right,45,55,92,45,-71,20,"RH_IPL, Inferior Parietal Lobule",,RH_Parietal
+138,173,R_A39rd,Right,51,61,116,39,-65,44,"RH_IPL, Inferior Parietal Lobule",,RH_Parietal
+140,174,R_A40rd,Right,43,91,117,47,-35,45,"RH_IPL, Inferior Parietal Lobule",,RH_Parietal
+142,175,R_A40c,Right,33,82,110,57,-44,38,"RH_IPL, Inferior Parietal Lobule",,RH_Parietal
+144,176,R_A39rv,Right,37,72,97,53,-54,25,"RH_IPL, Inferior Parietal Lobule",,RH_Parietal
+146,177,R_A40rv,Right,35,100,98,55,-26,26,"RH_IPL, Inferior Parietal Lobule",,RH_Parietal
+148,178,R_A7m,Right,84,61,123,6,-65,51,"RH_Pcun, Precuneus",,RH_Parietal
+150,179,R_A5m,Right,83,79,130,7,-47,58,"RH_Pcun, Precuneus",,RH_Parietal
+152,180,R_dmPOS,Right,74,62,97,16,-64,25,"RH_Pcun, Precuneus",,RH_Parietal
+154,181,R_A31,Right,84,72,107,6,-54,35,"RH_Pcun, Precuneus",,RH_Parietal
+156,182,R_A1/2/3ulhf,Right,40,112,116,50,-14,44,"RH_PoG, Postcentral Gyrus",,RH_Parietal
+158,183,R_A1/2/3tonIa,Right,34,116,87,56,-10,15,"RH_PoG, Postcentral Gyrus",,RH_Parietal
+160,184,R_A2,Right,42,102,120,48,-24,48,"RH_PoG, Postcentral Gyrus",,RH_Parietal
+162,185,R_A1/2/3tru,Right,70,93,141,20,-33,69,"RH_PoG, Postcentral Gyrus",,RH_Parietal
+164,186,R_G,Right,53,108,80,37,-18,8,"RH_INS, Insular Gyrus",,RH_Insular
+166,187,R_vIa,Right,57,140,59,33,14,-13,"RH_INS, Insular Gyrus",,RH_Insular
+168,188,R_dIa,Right,54,144,73,36,18,1,"RH_INS, Insular Gyrus",,RH_Insular
+170,189,R_vId/vIg,Right,51,124,63,39,-2,-9,"RH_INS, Insular Gyrus",,RH_Insular
+172,190,R_dIg,Right,51,119,80,39,-7,8,"RH_INS, Insular Gyrus",,RH_Insular
+174,191,R_dId,Right,52,131,77,38,5,5,"RH_INS, Insular Gyrus",,RH_Insular
+176,192,R_A23d,Right,86,89,104,4,-37,32,"RH_CG, Cingulate Gyrus",,RH_Limbic
+178,193,R_A24rv,Right,85,148,84,5,22,12,"RH_CG, Cingulate Gyrus",,RH_Limbic
+180,194,R_A32p,Right,85,154,99,5,28,27,"RH_CG, Cingulate Gyrus",,RH_Limbic
+182,195,R_A23v,Right,81,82,83,9,-44,11,"RH_CG, Cingulate Gyrus",,RH_Limbic
+184,196,R_A24cd,Right,86,132,110,4,6,38,"RH_CG, Cingulate Gyrus",,RH_Limbic
+186,197,R_A23c,Right,84,106,112,6,-20,40,"RH_CG, Cingulate Gyrus",,RH_Limbic
+188,198,R_A32sg,Right,85,167,78,5,41,6,"RH_CG, Cingulate Gyrus",,RH_Limbic
+190,199,R_cLinG,Right,80,41,63,10,-85,-9,"RH_MVOcC, MedioVentral Occipital Cortex",,RH_Occipital
+192,200,R_rCunG,Right,83,50,83,7,-76,11,"RH_MVOcC, MedioVentral Occipital Cortex",,RH_Occipital
+194,201,R_cCunG,Right,82,36,84,8,-90,12,"RH_MVOcC, MedioVentral Occipital Cortex",,RH_Occipital
+196,202,R_rLinG,Right,72,66,65,18,-60,-7,"RH_MVOcC, MedioVentral Occipital Cortex",,RH_Occipital
+198,203,R_vmPOS,Right,75,63,84,15,-63,12,"RH_MVOcC, MedioVentral Occipital Cortex",,RH_Occipital
+200,204,R_mOccG,Right,56,40,83,34,-86,11,"RH_LOcC, lateral Occipital Cortex",,RH_Occipital
+202,205,R_V5/MT+,Right,42,56,71,48,-70,-1,"RH_LOcC, lateral Occipital Cortex",,RH_Occipital
+204,206,R_OPC,Right,68,29,76,22,-97,4,"RH_LOcC, lateral Occipital Cortex",,RH_Occipital
+206,207,R_iOccG,Right,58,41,60,32,-85,-12,"RH_LOcC, lateral Occipital Cortex",,RH_Occipital
+208,208,R_msOccG,Right,74,41,106,16,-85,34,"RH_LOcC, lateral Occipital Cortex",,RH_Occipital
+210,209,R_lsOccG,Right,61,51,108,29,-75,36,"RH_LOcC, lateral Occipital Cortex",,RH_Occipital

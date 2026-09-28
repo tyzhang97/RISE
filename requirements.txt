@@ -1,0 +1,8 @@
+# Complete Python environment for the published RISE package, its
+# neural-network workflows, downstream analyses, and notebooks.
+risebrain[all]==1.0.0
+
+# External software that must be installed separately:
+#   MATLAB
+#   MATLAB Engine for Python (from the matching MATLAB release)
+#   hctsa and its MATLAB toolboxes

@@ -1,0 +1,229 @@
+Metadata-Version: 2.1
+Name: risebrain
+Version: 1.0.0
+Summary: Regional Identity Signature Expression (RISE), a quantifiable, fine-grained, and generalizable framework for mapping individualized regional identity across the cortex
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: brainspace==0.1.20
+Requires-Dist: h5py==3.11.0
+Requires-Dist: joblib==1.4.2
+Requires-Dist: matplotlib==3.7.5
+Requires-Dist: nibabel==5.2.1
+Requires-Dist: nilearn==0.10.4
+Requires-Dist: nipype==1.8.6
+Requires-Dist: numpy==1.24.4
+Requires-Dist: pandas==1.5.3
+Requires-Dist: Pillow==10.2.0
+Requires-Dist: pyarrow==17.0.0
+Requires-Dist: scikit-learn==1.3.2
+Requires-Dist: scipy==1.10.1
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: tables==3.8.0
+Requires-Dist: torch==2.4.1
+Provides-Extra: neural
+Requires-Dist: tables==3.8.0; extra == "neural"
+Requires-Dist: torch==2.4.1; extra == "neural"
+Provides-Extra: analysis
+Requires-Dist: ipython==8.12.3; extra == "analysis"
+Requires-Dist: neuromaps==0.0.5; extra == "analysis"
+Requires-Dist: seaborn==0.13.2; extra == "analysis"
+Requires-Dist: statsmodels==0.14.1; extra == "analysis"
+Requires-Dist: wordcloud==1.9.4; extra == "analysis"
+Provides-Extra: notebooks
+Requires-Dist: ipykernel==6.29.5; extra == "notebooks"
+Requires-Dist: jupyterlab==3.6.8; extra == "notebooks"
+Provides-Extra: all
+Requires-Dist: ipython==8.12.3; extra == "all"
+Requires-Dist: neuromaps==0.0.5; extra == "all"
+Requires-Dist: seaborn==0.13.2; extra == "all"
+Requires-Dist: statsmodels==0.14.1; extra == "all"
+Requires-Dist: wordcloud==1.9.4; extra == "all"
+Requires-Dist: ipykernel==6.29.5; extra == "all"
+Requires-Dist: jupyterlab==3.6.8; extra == "all"
+
+# RISE
+
+**Regional Identity Signature Expression (RISE)** is a latent-space framework for fine-scale, individualized mapping of regional identity across the human cortex.
+
+RISE learns generalizable latent representations of fine-grained cortical parcels from multidimensional resting-state fMRI features. By comparing an individual's parcel embeddings with group-reference embeddings, RISE derives the **Regional Signature Index (RSI)**, an individualized whole-cortex functional phenotype that quantifies the expression of canonical regional identities.
+
+![Overview of the RISE framework](figure/Fig1.png)
+
+*Figure 1. Overview of the RISE framework. RISE integrates multifaceted functional profiles, learns regional identity representations with multi-atlas supervision, and computes RSI from individual-to-reference embedding similarity.*
+
+## Why RISE?
+
+Existing approaches often capture isolated dimensions of cortical function. RISE integrates complementary functional attributes, including functional gradients, cortico-network and cortico-subcortical connectivity, and intrinsic temporal dynamics, to characterize the overall functional profile of each cortical region.
+
+The framework is designed to provide:
+
+- **Fine-grained quantification**: a 7,340-parcel cortical representation provides sufficient spatial granularity for mapping regional identity across the cortex.
+- **Atlas-agnostic representations**: multi-atlas supervision supplies diverse regional identity priors, allowing the model to learn an integrative latent representation rather than relying on a single atlas.
+- **Robustness to individual topological shifts**: RSI aggregates expression within each parcel's similarity profile, making it sensitive to expression strength while remaining robust to spatial shifts in functional regions.
+- **Generalization and transfer**: a pretrained model can be evaluated on independent subjects and fine-tuned for unseen datasets, including clinical cohorts.
+- **Individualized phenotyping**: RSI produces subject-specific cortical maps that can be used to study behavior, development, and psychiatric disease.
+
+## What can RISE do?
+
+RISE supports an end-to-end workflow from fMRI preprocessing to downstream individualized analyses:
+
+1. Extract parcel-level time series and classical local metrics from HCP-YA, HCP Development, or fMRIPrep clinical data.
+2. Compute multidimensional parcel features, including functional connectivity, aligned gradients, cortico-network connectivity, cortico-subcortical/cerebellar connectivity, hctsa temporal dynamics, ReHo, ALFF, and fALFF.
+3. Integrate the features into model-ready parcel tables and train a multi-atlas Siamese neural network.
+4. Export individual parcel embeddings and calculate RSI maps from group-reference embeddings.
+5. Apply RSI to independent-test generalization, fingerprinting, behavioral prediction, developmental brain-age and variability analyses, and clinical classification or transdiagnostic deviation mapping.
+
+## Further reading
+
+The manuscript preprint will be linked here:
+
+> **Preprint:** [Coming soon](#)
+
+For the scientific background and method details, see the paper accompanying this repository, especially the sections describing the multi-atlas latent-space representation, the Regional Signature Index, and its behavioral, developmental, and clinical applications.
+
+## Installation
+
+### Install the published package from PyPI
+
+The distribution name is `risebrain`; the Python import name is `rise`.
+
+```bash
+python -m pip install "risebrain[all]==1.0.0"
+```
+
+For the core runtime only:
+
+```bash
+python -m pip install risebrain==1.0.0
+```
+
+```python
+import rise
+
+print(rise.__version__)
+```
+
+The wheel includes the small feature resources, but not `atlas_repo`. Clone users
+can use the repository-relative `rise/atlas_repo` path in the supplied JSONC
+files. Pip users must download the atlas data from the GitHub repository, place
+it in a local directory, and set `atlas_repo` in each JSONC parameter file.
+Dataset inputs, trained models, results, MATLAB, MATLAB Engine for Python,
+hctsa, and MATLAB toolboxes are also external resources.
+
+### Create the project environment from `environment.yml`
+
+From the repository root:
+
+```bash
+conda env create -f environment.yml
+conda activate rise_env
+```
+
+The project environment installs the published package and the analysis and notebook extras. A pip equivalent is:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+The hctsa workflow additionally requires a compatible MATLAB Engine installation and the hctsa repository under `hctsa_repo/`. See [`hctsa_repo/README.md`](hctsa_repo/README.md).
+
+## Usage
+
+The workflow is organized into independent stages. Dataset paths and processing parameters are defined in [`configs/`](configs/), and the executable notebooks are documented in [`pipeline/README.md`](pipeline/README.md).
+
+### 1. Data preprocessing
+
+Select or adapt a JSONC preset in [`configs/`](configs/). The configuration loader resolves paths, discovers subjects and runs, prepares/resamples atlas images, and creates the brain-mask cache. The main public interfaces are:
+
+```python
+from rise import load_config, read_subject_ids, prepare_atlases
+
+config = load_config("configs/hcp_timeseries_parameters.jsonc")
+subjects = read_subject_ids("data/HCP/info/hcp_ids.csv")
+```
+
+### 2. Time-series extraction
+
+Build run inputs with the dataset-specific discovery function and extract parcel time series and voxelwise metrics:
+
+```python
+from rise import build_hcp_run_inputs, extract_dataset
+
+runs = build_hcp_run_inputs(subjects, config)
+extract_dataset(runs, config)
+```
+
+The same API supports HCP-D and fMRIPrep derivatives through `build_hcpd_run_inputs` and `build_fmriprep_run_inputs`. Outputs use a BIDS-like layout under `indiv/<subject>/func/<run>/data/`. See the stage-01 notebooks in [`pipeline/`](pipeline/).
+
+### 3. Feature calculation and integration
+
+After time-series extraction, run hctsa where required and compute the multidimensional feature families:
+
+```python
+from rise import extract_all_features
+
+outputs = extract_all_features(subjects, feature_config, modes=["NGR", "GSR"])
+```
+
+The feature workflow computes cortical FC before gradients, then extracts network FC, subcortical/cerebellar FC, hctsa features, and classical metrics. [`rise/integration.py`](rise/integration.py) standardizes features within each subject, clips extreme values, and writes train/test and group-mean Feather tables. See [`pipeline/README.md`](pipeline/README.md) and [`configs/README.md`](configs/README.md).
+
+### 4. Neural-network training and transfer
+
+The multi-atlas Siamese network uses a shared MLP encoder and separate left/right atlas classification heads. The default encoder is `378 -> 512 -> 512 -> 256`. Train, test, and export embeddings through the executable modules:
+
+```bash
+python -m rise.neural_network.train \
+    --config configs/hcp_network_pretrain_parameters.jsonc
+python -m rise.neural_network.test \
+    --config configs/hcp_network_pretrain_parameters.jsonc
+python -m rise.neural_network.transform \
+    --config configs/hcp_network_pretrain_parameters.jsonc
+```
+
+For HCP-D transfer learning, use [`pipeline/06_network_finetune_and_transform.ipynb`](pipeline/06_network_finetune_and_transform.ipynb) and `configs/hcpd_network_finetune_parameters.jsonc`. Training and transfer details are summarized in [`pipeline/README.md`](pipeline/README.md).
+
+### 5. RSI calculation
+
+The RSI workflow loads repeated train/test embeddings, constructs parcel-wise group-reference embeddings, computes within-hemisphere cosine-similarity expression matrices, derives an adaptive threshold, and aggregates above-threshold expression into single-bin or multi-bin RSI:
+
+```python
+from rise import compute_training_rsi, compute_test_rsi
+```
+
+The executable workflow is [`pipeline/07_rsi_calculation.ipynb`](pipeline/07_rsi_calculation.ipynb), and the implementation is [`rise/rsi.py`](rise/rsi.py). RSI outputs are stored under `results/rsi/`.
+
+### 6. Downstream analyses
+
+Generated predictions, embeddings, and RSI maps can be used in the downstream experiments:
+
+- [Evaluation](analysis/evaluation/README.md): independent-test classification accuracy, fingerprinting, and inter-subject RSI variation.
+- [Development](analysis/development/README.md): HCP-D regional classification, brain-age prediction, and age-related RSI variability.
+- [Behavior](analysis/behavior/README.md): behavioral prediction, brain-behavior association, and task-activation validation.
+- [Clinical](analysis/clinical/README.md): SCZ, MDD, and BD classification, plus transdiagnostic Cohen's *d* maps.
+
+## Repository layout
+
+```text
+rise/                 Core preprocessing, feature, neural-network, and RSI package
+configs/              JSONC dataset and model presets
+pipeline/              End-to-end executable notebooks
+analysis/              Evaluation, development, behavioral, and clinical analyses
+check/                New-versus-historical result validation
+rise/atlas_repo/       External atlas and multi-atlas resources used by the presets
+hctsa_repo/            External MATLAB hctsa dependency
+models/                Trained model checkpoints
+results/               Derived predictions, embeddings, and RSI outputs
+data/                  Dataset metadata, subject lists, and processed data
+```
+
+## Important conventions
+
+- Use the public resource accessors in `rise.fetch` for atlas and packaged feature resources.
+- Keep the `NGR` and `GSR` naming conventions and BIDS-like output filenames unchanged when reproducing the published workflow.
+- Clinical diagnosis labels use `BD` rather than the obsolete `BP`; the clinical site name is `PKU6-CP`.
+- Do not change numerical processing or filename conventions without checking the corresponding historical workflow and validation notebooks.
+
+## Citation
+
+If you use RISE, please cite the accompanying manuscript. The citation and preprint link will be added here when available.

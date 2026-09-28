@@ -1,0 +1,58 @@
+{
+  "atlas_repo": "../rise/atlas_repo", // Atlas data directory; paths are resolved relative to this file.
+  "dataset_name": "PKU6", // Clinical center name recorded in extraction metadata.
+  "dataset_root": "../data/clinical/PKU6/fmriprep_outputs", // fMRIPrep derivatives root for the PKU6 center.
+  "output_root": "../data/clinical/PKU6/processed_data", // Output root, resolved relative to this configuration file.
+  "atlas_cache": "../data/clinical/PKU6/atlas_cache", // Cache for atlases resampled to the PKU6 BOLD grid.
+  "confound_format": "fmriprep", // Use fMRIPrep confounds instead of the HCP-style no-confound input.
+  "confound_strategy": { // Matches the original load_confounds call: motion and WM/CSF are selected; global_signal is an inactive option unless added to strategy.
+    "strategy": ["motion", "wm_csf"],
+    "motion": "full",
+    "wm_csf": "basic",
+    "global_signal": "basic"
+  },
+  "fmriprep": { // BIDS/fMRIPrep filename components used by build_fmriprep_run_inputs.
+    "session": "ses-1",
+    "task": "rest",
+    "space": "MNI152NLin6Asym",
+    "resolution": "2"
+  },
+  "space": "MNI152NLin6Asym", // Standard space used to select atlas files and name outputs.
+  "resolution": "2mm", // Atlas voxel resolution used for extraction.
+  "atlases": [ // Atlases from which regional time series are extracted.
+    "Fine-grained",
+    "Tianye",
+    "Buckner"
+  ],
+  "smooth_atlases": [ // Atlases extracted from the spatially smoothed BOLD image.
+    "Fine-grained",
+    "Tianye",
+    "Buckner"
+  ],
+  "fill_zero_atlases": [ // Because the atlas is highly fine-grained, neighborhood interpolation is applied during time-series extraction to prevent individual parcels in some subjects from having no valid signal.
+    "Fine-grained"
+  ],
+  "brain_mask": "MNI/MNI152NLin2009cAsym/mni_icbm152_t1_tal_nlin_asym_09c_mask_2mm.nii.gz", // Brain mask path relative to the packaged or overridden atlas repository.
+  "tr": 2.0, // PKU6 repetition time in seconds, confirmed from metadata.
+  "high_pass_hz": 0.01, // High-pass cutoff in Hz for time-series cleaning and ReHo input.
+  "low_pass_hz": 0.25, // Low-pass cutoff in Hz for time-series cleaning and ReHo input.
+  "smoothing_fwhm_mm": 8, // Spatial smoothing FWHM used by the original PKU6 workflow.
+  "temporary_directory": "/dev/shm", // Temporary directory for filtered BOLD images used by ReHo.
+  "detrend": true, // Whether to remove linear trends during signal cleaning.
+  "compute_reho_alff_falff": true, // Whether to calculate ReHo, ALFF, and fALFF maps.
+  "falff_low_frequency_hz": 0.01, // Lower frequency bound in Hz for ALFF and fALFF.
+  "falff_high_frequency_hz": 0.08, // Upper frequency bound in Hz for ALFF and fALFF.
+  "gsr_modes": [ // Output modes: true uses motion+WM/CSF plus the custom RISE global signal; false uses motion+WM/CSF only.
+    true,
+    false
+  ],
+  "skip_existing": false, // Skip runs whose saved parameters match the current parameters.
+  "n_processes": 8, // Number of worker processes used for center-level extraction.
+  "runs": [
+    {
+      "run": "run-1", // BIDS run label in the fMRIPrep filename.
+      "output_name": "ses-1_task-rest_run-1" // Standardized output label.
+    }
+  ]
+}
+

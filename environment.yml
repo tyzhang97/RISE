@@ -1,0 +1,20 @@
+name: rise_env
+
+channels:
+  - defaults
+
+dependencies:
+  - python=3.8.5
+  - pip
+
+  # Install the published RISE package and its complete Python dependency set.
+  - pip:
+      - pip==24.2
+      - setuptools==75.1.0
+      - wheel==0.44.0
+      - risebrain[all]==1.0.0
+
+# External software not managed by this file:
+#   - MATLAB
+#   - MATLAB Engine for Python (install from the matching MATLAB release)
+#   - hctsa and its MATLAB toolboxes

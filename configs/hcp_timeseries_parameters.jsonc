@@ -1,0 +1,61 @@
+{
+  "atlas_repo": "../rise/atlas_repo", // Atlas data directory; paths are resolved relative to this file.
+  "dataset_name": "HCP", // Dataset name recorded in the extraction metadata.
+  "dataset_root": "../data/HCP/data", // Root directory containing HCP subject folders.
+  "output_root": "../data/HCP/processed_data", // Output root, resolved relative to this configuration file.
+  "atlas_cache": "../data/HCP/atlas_cache", // Cache for atlases resampled to the HCP BOLD grid.
+  "subject_files": [ // CSV files containing the subject IDs to process.
+    "../data/HCP/info/hcp_ids.csv"
+  ],
+  "confound_format": "hcp", // Use HCP-style inputs without fMRIPrep nuisance-confound regression.
+  "space": "MNI152NLin6Asym", // Standard space used to select atlas files and name outputs.
+  "resolution": "2mm", // Atlas voxel resolution used for extraction.
+  "atlases": [ // Atlases from which regional time series are extracted.
+    "Fine-grained",
+    "Tianye",
+    "Buckner"
+  ],
+  "smooth_atlases": [ // Atlases extracted from the spatially smoothed BOLD image.
+    "Fine-grained",
+    "Tianye",
+    "Buckner"
+  ],
+  "fill_zero_atlases": [ // Because the atlas is highly fine-grained, neighborhood interpolation is applied during time-series extraction to prevent individual parcels in some subjects from having no valid signal.
+    "Fine-grained"
+  ],
+  "brain_mask": "MNI/MNI152NLin2009cAsym/mni_icbm152_t1_tal_nlin_asym_09c_mask_2mm.nii.gz", // Brain mask path relative to the packaged or overridden atlas repository.
+  "tr": 0.72, // Default repetition time in seconds.
+  "high_pass_hz": 0.01, // High-pass cutoff in Hz for time-series cleaning and ReHo input.
+  "low_pass_hz": 0.25, // Low-pass cutoff in Hz for time-series cleaning and ReHo input.
+  "smoothing_fwhm_mm": 4, // Spatial smoothing FWHM in millimeters.
+  "temporary_directory": "/dev/shm", // Temporary directory for filtered BOLD images used by ReHo.
+  "detrend": true, // Whether to remove linear trends during signal cleaning.
+  "compute_reho_alff_falff": true, // Whether to calculate ReHo, ALFF, and fALFF maps.
+  "falff_low_frequency_hz": 0.01, // Lower frequency bound in Hz for ALFF and fALFF.
+  "falff_high_frequency_hz": 0.08, // Upper frequency bound in Hz for ALFF and fALFF.
+  "gsr_modes": [ // Output modes: true enables GSR and false produces NGR results.
+    true,
+    false
+  ],
+  "skip_existing": false, // Skip runs whose saved parameters match the current parameters.
+  "n_processes": 8, // Number of worker processes used for dataset-level extraction.
+  "runs": [ // HCP input runs and their standardized output names.
+    {
+      "input_name": "rfMRI_REST1_LR", // HCP Results directory and input filename stem.
+      "output_name": "ses-1_task-rest_run-1" // Run label used in output paths and filenames.
+    },
+    {
+      "input_name": "rfMRI_REST1_RL", // HCP Results directory and input filename stem.
+      "output_name": "ses-1_task-rest_run-2" // Run label used in output paths and filenames.
+    },
+    {
+      "input_name": "rfMRI_REST2_LR", // HCP Results directory and input filename stem.
+      "output_name": "ses-2_task-rest_run-1" // Run label used in output paths and filenames.
+    },
+    {
+      "input_name": "rfMRI_REST2_RL", // HCP Results directory and input filename stem.
+      "output_name": "ses-2_task-rest_run-2" // Run label used in output paths and filenames.
+    }
+  ]
+}
+

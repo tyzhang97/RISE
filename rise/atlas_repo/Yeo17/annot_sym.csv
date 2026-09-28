@@ -1,0 +1,18 @@
+Region label,Train label,Region name
+1,0, Visual Central (Visual A)
+2,1, Visual Peripheral (Visual B)
+3,2, Somatomotor A
+4,3, Somatomotor B
+5,4, Dorsal Attention A
+6,5, Dorsal Attention B
+7,6, Salience / Ventral Attention A
+8,7, Salience / Ventral Attention B
+9,8, Limbic A
+10,9, Limbic B
+11,10, Control C
+12,11, Control A
+13,12, Control B
+14,13, Temporal Parietal
+15,14, Default C
+16,15, Default A
+17,16, Default B

@@ -1,0 +1,5 @@
+recursive-include rise/feature_resources *
+recursive-include rise/matlab *.m
+recursive-include rise/vis/resources *
+prune rise/atlas_repo
+global-exclude __pycache__ *.py[cod] *.orig
