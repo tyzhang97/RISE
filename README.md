@@ -34,7 +34,7 @@ RISE provides a comprehensive pipeline from parcel-level time-series extraction 
 
 ## Further reading
 
-For further details about RISE, please refer to our manuscript:
+For further details about RISE, please refer to our preprint:
 
 > **Preprint:** [Coming soon](#)
 
@@ -200,7 +200,7 @@ data/                  Dataset metadata, subject lists, and processed data
 
 ## Citation
 
-If you use RISE, please cite the accompanying manuscript. The citation and preprint link will be added here when available.
+If you use RISE, please cite the preprint. [Coming soon](#)
 
 ## Support
 
