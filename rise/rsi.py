@@ -500,26 +500,25 @@ def calculate_rsi_parallel(
     return single_bin_rsi, multi_bin_rsi
 
 
-def compute_training_rsi(
-    train_indiv_expression_matrices,
-    train_subject_ids,
+def compute_rsi(
+    indiv_expression_matrices,
+    subject_ids,
     threshold,
     num_bins=10,
     n_jobs=16,
 ):
-    """Calculate training RSI and its raw parcel-wise group mean.
+    """Calculate raw RSI for training, test, or other subjects.
 
     Parameters
     ----------
-    train_indiv_expression_matrices : numpy.ndarray
-        Cached training expression matrices with shape
+    indiv_expression_matrices : numpy.ndarray
+        Cached expression matrices with shape
         ``(subjects, 2 * parcels_per_hemisphere, parcels_per_hemisphere)``.
-    train_subject_ids : sequence of str
-        Training subject IDs in matrix order.
+    subject_ids : sequence of str
+        Subject IDs in matrix order.
     threshold : float
-        Adaptive threshold derived from the training group matrix.
-    The function always returns raw single-bin and multi-bin RSI. Normalize
-    single-bin values explicitly in the calling workflow when needed.
+        Adaptive threshold derived from the training group matrix. Use the
+        same training-derived threshold for training and test subjects.
     num_bins : int, default=10
         Number of multi-bin RSI intervals.
     n_jobs : int, default=16
@@ -527,82 +526,21 @@ def compute_training_rsi(
 
     Returns
     -------
-    train_rsi : pandas.DataFrame
-        Training single-bin RSI with shape ``(subjects, parcels)``. This is
-        normalized only when ``norm=True``.
-    train_multibin_rsi : numpy.ndarray
-        Training multi-bin RSI with shape ``(subjects, parcels, num_bins)``.
-    train_group_mean : pandas.Series
-        Raw, unnormalized training mean single-bin RSI for every parcel. Pass
-        this value to :func:`compute_test_rsi`.
-    train_multibin_group_mean : numpy.ndarray
-        Raw training mean multi-bin RSI with shape ``(parcels, num_bins)``.
-        Pass this value to :func:`compute_test_rsi`.
+    rsi : pandas.DataFrame
+        Raw single-bin RSI with shape ``(subjects, parcels)``.
+    multibin_rsi : numpy.ndarray
+        Raw multi-bin RSI with shape ``(subjects, parcels, num_bins)``.
+
+    Notes
+    -----
+    No group-mean normalization is applied. If needed, calculate group means
+    and normalize explicitly in the calling workflow.
     """
 
-    train_rsi, train_multibin_rsi = calculate_rsi_parallel(
-        train_indiv_expression_matrices,
-        train_subject_ids,
+    return calculate_rsi_parallel(
+        indiv_expression_matrices,
+        subject_ids,
         threshold,
         num_bins=num_bins,
         n_jobs=n_jobs,
     )
-    train_group_mean = train_rsi.mean(axis=0)
-    train_group_mean.name = "train_group_mean_rsi"
-    train_multibin_group_mean = train_multibin_rsi.mean(axis=0)
-    return (
-        train_rsi,
-        train_multibin_rsi,
-        train_group_mean,
-        train_multibin_group_mean,
-    )
-
-
-def compute_test_rsi(
-    test_indiv_expression_matrices,
-    test_subject_ids,
-    threshold,
-    training_group_mean,
-    training_multibin_group_mean,
-    num_bins=10,
-    n_jobs=16,
-):
-    """Calculate test RSI using references and normalization from training.
-
-    Parameters
-    ----------
-    test_indiv_expression_matrices : numpy.ndarray
-        Cached test expression matrices with shape
-        ``(subjects, 2 * parcels_per_hemisphere, parcels_per_hemisphere)``.
-    test_subject_ids : sequence of str
-        Test subject IDs in matrix order.
-    threshold : float
-        Adaptive threshold derived only from training data.
-    training_group_mean : pandas.Series or numpy.ndarray
-        Raw parcel-wise mean returned by :func:`compute_training_rsi`.
-    training_multibin_group_mean : numpy.ndarray
-        Raw parcel-wise and bin-wise mean returned by
-        :func:`compute_training_rsi`, with shape ``(parcels, num_bins)``.
-    The function always returns raw single-bin and multi-bin RSI. Normalize
-    single-bin values explicitly in the calling workflow when needed.
-    num_bins : int, default=10
-        Number of multi-bin RSI intervals.
-    n_jobs : int, default=16
-        Number of joblib threads used across subjects.
-
-    Returns
-    -------
-    test_rsi : pandas.DataFrame
-        Test single-bin RSI with shape ``(subjects, parcels)``.
-    test_multibin_rsi : numpy.ndarray
-        Test multi-bin RSI with shape ``(subjects, parcels, num_bins)``.
-    """
-
-    test_rsi, test_multibin_rsi = calculate_rsi_parallel(
-        test_indiv_expression_matrices,
-        test_subject_ids,
-        threshold,
-        num_bins=num_bins,
-        n_jobs=n_jobs,
-    )
-    return test_rsi, test_multibin_rsi

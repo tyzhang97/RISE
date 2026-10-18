@@ -69,8 +69,7 @@ from .rsi import (
     calculate_adaptive_threshold,
     compute_region_corrs_parallel,
     compute_similarity,
-    compute_test_rsi,
-    compute_training_rsi,
+    compute_rsi,
     load_split_embeddings,
 )
 
@@ -129,7 +128,6 @@ __all__ = [
     "calculate_adaptive_threshold",
     "compute_region_corrs_parallel",
     "compute_similarity",
-    "compute_test_rsi",
-    "compute_training_rsi",
+    "compute_rsi",
     "load_split_embeddings",
 ]

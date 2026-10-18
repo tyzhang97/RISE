@@ -22,10 +22,16 @@ change this field to the extracted directory. RISE raises a descriptive
 | --- | --- |
 | `hcp_timeseries_parameters.jsonc` | HCP-YA time-series extraction and voxelwise ReHo, ALFF, and fALFF metric calculation. |
 | `hcpd_timeseries_parameters.jsonc` | HCP Development time-series extraction and voxelwise ReHo, ALFF, and fALFF metric calculation. |
-| `pku6_timeseries_parameters.jsonc` | Clinical-data time-series extraction and voxelwise ReHo, ALFF, and fALFF metric calculation, using data from PKU6 site as an example. |
+| `clinical_timeseries_parameters.jsonc` | Example interface for clinical fMRI data preprocessed with fMRIPrep: time-series extraction and voxelwise ReHo, ALFF, and fALFF metric calculation. |
 | `hcp_feature_parameters.jsonc` | Features extraction parameter file for HCP dataset. |
 | `hcp_network_pretrain_parameters.jsonc` | Neural-network pretraining, group testing, and parcel embedding extraction. |
 | `hcpd_network_finetune_parameters.jsonc` | Fine-tuning from HCP checkpoints, group testing, and parcel embedding extraction. |
+
+The clinical preset demonstrates `rise.build_fmriprep_run_inputs` in
+`pipeline/01_clinical_timeseries_extraction.ipynb`. Set the input, output, and
+cache paths, BIDS filename entities, repetition time, and preprocessing settings
+to match your own fMRIPrep derivatives. Its values are examples rather than
+settings for a specific clinical site.
 
 ## Neural-network parameters
 
@@ -58,8 +64,7 @@ The `data` directory contains processed time series, voxelwise ReHo/ALFF/fALFF
 maps, and intermediate FC matrices. The `feature` directory contains
 parcel-level hctsa features, aligned gradients, network connectivity features,
 and parcel-level ReHo/ALFF/fALFF. The `mean` directory stores features averaged
-across runs. A `group/` directory is created only by workflows that write
-actual group-level results; subject-level feature extraction does not create it.
+across runs.
 
 Output filenames retain BIDS-like entities such as subject, run, space, atlas,
 processing description, regression mode (`NGR` or `GSR`), and feature name.

@@ -45,8 +45,6 @@ setup(
         "fine-grained, and generalizable framework for mapping individualized "
         "regional identity across the cortex"
     ),
-    long_description=(ROOT / "README.md").read_text(encoding="utf-8"),
-    long_description_content_type="text/markdown",
     python_requires=">=3.8",
     packages=find_packages(include=["rise", "rise.*"]),
     include_package_data=True,

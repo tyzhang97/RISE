@@ -5,16 +5,6 @@ perform the same stage for different datasets.
 The hctsa notebooks require a Python environment with a compatible `matlab.engine` 
 installation.
 
-Install the published package in the notebook kernel environment before running
-any stage:
-
-```bash
-python -m pip install "risebrain[all]==1.0.0"
-```
-
-The notebooks import the published `rise` package. They no longer prepend the
-repository root to `sys.path`; `PROJECT_ROOT` is retained only for experiment data,
-models, results, and JSONC configurations.
 
 ## 01. Time-series extraction
 
@@ -23,9 +13,8 @@ models, results, and JSONC configurations.
   cerebellar time series; and calculates voxelwise ReHo, ALFF, and fALFF.
 - `01_hcpd_timeseries_extraction.ipynb`: performs the corresponding extraction
   for the four HCP Development AP/PA runs.
-- `01_pku6_timeseries_extraction.ipynb`: discovers fMRIPrep outputs for the PKU6
-  clinical dataset, applies the configured preprocessing, and extracts NGR/GSR
-  time series and voxelwise metrics.
+- `01_clinical_timeseries_extraction.ipynb`: demonstrates the interface for
+  clinical fMRI data preprocessed with fMRIPrep, using `../configs/clinical_timeseries_parameters.jsonc`;.
 
 ## 02. hctsa extraction
 
@@ -50,9 +39,6 @@ the dataset configuration, subject lists, feature roots, and output paths.
   standardizes them within each subject, and writes train/test sample-level and
   group-mean Feather files for each configured run.
 
-For another dataset, use the same integration functions with that dataset's
-subject lists, feature root, and output directory.
-
 ## 05-06. Neural-network pretraining and transfer
 
 - `05_network_pretrain_and_transform.ipynb`: trains repeated HCP models, tests
@@ -66,16 +52,15 @@ subject lists, feature root, and output directory.
 
 Training, testing, and embedding extraction are independent cells. They run as
 installed modules with `python -m rise.neural_network.<module>`. Testing and
-transform load `best_validloss_epoch.pth` by default, and `models_root` in the
+transform load the pretrained model weights, and `models_root` in the
 selected JSONC controls where all checkpoints and predictions are stored.
 
 ## 07. RSI calculation
 
-- `07_rsi_calculation.ipynb`: builds repeat-specific group-reference
+- `07_rsi_calculation.ipynb`: builds group-reference
   embeddings from HCP training data, derives the adaptive threshold from the
   training group expression matrix, and calculates single-bin and multi-bin
-  RSI for the train and test splits. The notebook can optionally normalize 
-  both splits by the parcel-wise training RSI mean.
+  RSI for the train and test splits.
 
 ## HCP-YA execution order
 
@@ -100,6 +85,8 @@ and export HCP-D embeddings.
 
 ## Clinical dataset processing
 
+Start with `01_clinical_timeseries_extraction.ipynb` for fMRIPrep derivatives.
+Edit `../configs/clinical_timeseries_parameters.jsonc` to match your data.
 Use the HCP processing notebooks as the reference workflow for clinical
 datasets. Adapt the dataset configuration, subject lists, feature roots, output
 paths, and model configuration as needed.

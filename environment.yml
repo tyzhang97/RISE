@@ -12,9 +12,10 @@ dependencies:
       - pip==24.2
       - setuptools==75.1.0
       - wheel==0.44.0
-      - risebrain[all]==1.0.0
+      - risebrain[all]
 
 # External software not managed by this file:
 #   - MATLAB
 #   - MATLAB Engine for Python (install from the matching MATLAB release)
 #   - hctsa and its MATLAB toolboxes
+
